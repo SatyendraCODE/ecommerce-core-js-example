@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      p {
+        margin: 0;
+      }
+      #product-container {
+        margin-top: 10px;
+        width: 100%;
+        height: min-content;
+        border: 1px solid white;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      #productName {
+      }
+      .proItems {
+        height: 350px;
+        transition: 0.25s;
+      }
+      .proItems:hover {
+        background-color: #0d6efd !important;
+        color: white;
+        outline: 2px solid #0d6efd !important;
+      }
+      .title-pItem-lHeight {
+        line-height: normal;
+      }
+      .sidebar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 250px;
+      }
+      .sidebar-container {
+      }
+      @media only screen and (max-width: 992px) {
+        .proItems {
+          height: 290px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container-xl p-0 rounded">
+      <div
+        class="border-bottom pb-2 d-flex justify-content-between align-items-center"
+      >
+        <div class="w-25 d-flex m-2 ms-3 position-relative">
+          <input
+            type="text"
+            name="productName"
+            id="productName"
+            class="form-control d-inline-block w-100 p-2"
+            placeholder="Search product"
+            onkeyup="handleSearch(this);"
+          />
+          <label
+            for="productName"
+            class="position-absolute"
+            style="right: 5px; top: 4px"
+            ><span class="material-symbols-outlined fs-2 text-secondary">
+              search
+            </span></label
+          >
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Featured
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a id="Featured" class="dropdown-item" href="#">Featured</a>
+            </li>
+            <li>
+              <a id="High_to_Low" class="dropdown-item" href="#"
+                >Price:High to Low</a
+              >
+            </li>
+            <li>
+              <a id="Low_to_High" class="dropdown-item" href="#"
+                >Price:Low to High</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="product-container" class="row m-0 pt-2 px-1">
+        <!-- product items here add through script -->
+      </div>
+    </main>
+
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-container w-100 p-2">
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" id="sortByCategory" />
+          <label class="form-check-label" for="sortByCategory">
+            By Category Sorting
+          </label>
+        </div>
+        <h6 class="border-bottom ps-1">Filters</h6>
+        <div id="category-list">
+          <!-- category added here -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <!-- <script src="script1.js"></script>
+  <script src="script2.js"></script> -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+</html>
